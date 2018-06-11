@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BELLY BUTTON DIVERSITY</title>
+    <!-- Load Plotly JS -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron text-center">
+            <h1>Belly Button Biodiversity Dashboard</h1> 
+            <p>Use the interactive charts below to explore the dataset</p>
+            <p id="test"></p> 
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                    <div class="well well-sm">
+                        <div class="form-group">
+                            <label for="sel1">SELECT Sample:</label>
+                            <select class="form-control" id="selDataset" onchange="optionChanged(this.value)">
+                                <option value=""></option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="panel-group">
+                        <div class="panel panel-default">
+                            <div class="panel-body">Panel Content</div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-body">Panel Content</div>
+                        </div>
+                    </div>
+            </div>
+            <div class="col-md-5">
+                <div id="myPie"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+
+</html>
