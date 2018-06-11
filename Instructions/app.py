@@ -2,12 +2,7 @@ import numpy as np
 from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
 from sqlalchemy import create_engine, func, inspect
-from flask import (
-    Flask,
-    render_template,
-    jsonify,
-    request,
-    redirect)
+from flask import Flask, render_template, jsonify, request, redirect
 from flask_sqlalchemy import SQLAlchemy
 
 #################################################
@@ -32,7 +27,6 @@ inspector = inspect(engine)
 inspector.get_table_names()
 
 session = Session(engine)
-
 
 #create route that renders index.html template
 @app.route("/")
