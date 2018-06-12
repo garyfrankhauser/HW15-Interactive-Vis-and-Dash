@@ -11,8 +11,6 @@ function loadSamples(){
 
             document.querySelector("#selDataset")
                 .appendChild(opt);
-
-
         }
     });
 
@@ -39,9 +37,7 @@ function optionChanged(val){
             height: 400,
             width: 500
           };
-          
           Plotly.newPlot('myPie', data, layout);  
     })
 }
-
 loadSamples();
